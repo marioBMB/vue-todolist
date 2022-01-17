@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="app">
+
+
+        <header>
+            <div class="container">
+
+            </div>
+        </header>
+
+        <main>  
+            <div class="container">
+                
+                <section class='main-top'>
+                    <input type="text" id='add-item' v-model="inputValue" @keyup.enter="pushItem(inputValue)" placeholder="Nuovo todo">
+                    <button @click='pushItem(inputValue)'>Aggiungi</button>
+                </section>
+                
+                <section class='main-bottom'>
+                    <ul class='todolist'>
+                        <li v-for="(item, index) in elements">            
+                            <span :class='{done: isDone(index)}' @click="toggleCheck(index)">{{item.text}}</span>
+                            <a class='remove' @click="removeItem(index)">
+                                <i class="fas fa-times"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

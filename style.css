@@ -1,0 +1,78 @@
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.todolist span, .todolist .remove {
+    cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.main-top {
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+.main-bottom {
+    background-color: #f6f7f8;
+    padding: 1rem 2rem;
+}
+
+.todolist li {
+    height: 2rem;
+    line-height: 2rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.todolist li:hover {
+    background-color: #fff;
+}
+
+.todolist li span {
+    width: calc(100% - 50px);
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.todolist .remove {
+    width: 20px;
+    text-align: center;
+}
+
+.todolist .remove:hover {
+    color: red;
+}
+
+#add-item {
+    margin-right: 10px;
+    border-radius: 7px;
+}
+
+button {
+    border-radius: 7px;
+    padding: 4px;
+    cursor: pointer;
+    line-height: 1.2rem;
+    font-size: 1rem;
+}
+
+
+.main-top input {
+    height: 1.2rem;
+    line-height: 1.2rem;
+    padding: 5px;
+    padding-left: 10px;
+    width: 30%;
+    font-size: 1rem;
+}
