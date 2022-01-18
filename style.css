@@ -5,6 +5,15 @@
     max-width: 1170px;
 }
 
+.logo {
+    width: 100%;
+    text-align: center;
+}
+
+.logo img {
+    width: 50%;
+}
+
 ul {
     list-style: none;
     padding-left: 0;
@@ -30,8 +39,8 @@ ul {
 }
 
 .todolist li {
-    height: 2rem;
-    line-height: 2rem;
+    height: 2.2rem;
+    line-height: 2.2rem;
     border-bottom: 1px solid #ccc;
 }
 
@@ -46,17 +55,26 @@ ul {
 }
 
 .todolist .remove {
-    width: 20px;
     text-align: center;
 }
+
+.todolist .remove i{
+    vertical-align: middle;
+}
+
 
 .todolist .remove:hover {
     color: red;
 }
 
-#add-item {
+#new-todo {
     margin-right: 10px;
     border-radius: 7px;
+}
+
+#submit:hover {
+    background-color: #007bff;
+    color: white;
 }
 
 button {
@@ -75,4 +93,13 @@ button {
     padding-left: 10px;
     width: 30%;
     font-size: 1rem;
+}
+
+
+input:focus {
+    outline: none;
+}
+
+input, button {
+    border: 1px solid #888;
 }

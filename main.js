@@ -5,7 +5,7 @@ let app = new Vue({
             
             inputValue: "",
             done: [],
-            elements: [
+            todolist: [
 
                 {
                     text: "Fare i compiti",
@@ -27,7 +27,7 @@ let app = new Vue({
         },
         methods: {
             checkDone: function(index){
-                if(this.elements[index].done){
+                if(this.todolist[index].done){
                     return true;
                 }
                 return false;
@@ -35,26 +35,26 @@ let app = new Vue({
             pushItem: function(value){
                 if (value != ""){
                     let newObj = { text: value, done: false};
-                    this.elements.push(newObj);
+                    this.todolist.push(newObj);
                 }
             },
             removeItem: function(index){
-                this.elements.splice(index, 1);
+                this.todolist.splice(index, 1);
             },
             toggleCheck: function(index){
 
-                if (this.elements[index].done){
-                    this.elements[index].done = false;
+                if (this.todolist[index].done){
+                    this.todolist[index].done = false;
                 }
                 else {
-                    this.elements[index].done = true;
+                    this.todolist[index].done = true;
                 }
             },
             keyMonitor: function(event){
                 console.log(event.key);
             },
             isDone: function(index){
-                return (this.elements[index].done);
+                return (this.todolist[index].done);
             }
         },
 

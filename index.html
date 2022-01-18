@@ -16,6 +16,9 @@
         <header>
             <div class="container">
 
+                <div class="logo">
+                    <img src="https://hiringplatform.boolean.careers/images/logo.png" alt="">
+                </div>
             </div>
         </header>
 
@@ -23,19 +26,20 @@
             <div class="container">
                 
                 <section class='main-top'>
-                    <input type="text" id='add-item' v-model="inputValue" @keyup.enter="pushItem(inputValue)" placeholder="Nuovo todo">
-                    <button @click='pushItem(inputValue)'>Aggiungi</button>
+                    <input type="text" id='new-todo' v-model="inputValue" @keyup.enter="pushItem(inputValue)" placeholder="Nuovo todo">
+                    <button id='submit' @click='pushItem(inputValue)'>Aggiungi</button>
                 </section>
                 
                 <section class='main-bottom'>
-                    <ul class='todolist'>
-                        <li v-for="(item, index) in elements">            
+                    <ul class='todolist' v-if="todolist.length > 0">
+                        <li v-for="(item, index) in todolist">            
                             <span :class='{done: isDone(index)}' @click="toggleCheck(index)">{{item.text}}</span>
                             <a class='remove' @click="removeItem(index)">
                                 <i class="fas fa-times"></i>
                             </a>
                         </li>
                     </ul>
+                    <h2 v-else>Non ci sono elementi</h2>
                 </section>
             </div>
         </main>
