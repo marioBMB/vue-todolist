@@ -36,6 +36,7 @@ let app = new Vue({
                 if (value != ""){
                     let newObj = { text: value, done: false};
                     this.todolist.push(newObj);
+                    this.inputValue = "";
                 }
             },
             removeItem: function(index){
