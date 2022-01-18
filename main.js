@@ -43,12 +43,7 @@ let app = new Vue({
             },
             toggleCheck: function(index){
 
-                if (this.todolist[index].done){
-                    this.todolist[index].done = false;
-                }
-                else {
-                    this.todolist[index].done = true;
-                }
+                this.todolist[index].done = !this.todolist[index].done;
             },
             keyMonitor: function(event){
                 console.log(event.key);

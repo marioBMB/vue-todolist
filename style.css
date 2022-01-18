@@ -39,9 +39,10 @@ ul {
 }
 
 .todolist li {
-    height: 2.2rem;
+    min-height: 2.2rem;
     line-height: 2.2rem;
     border-bottom: 1px solid #ccc;
+    word-break: break-all;
 }
 
 .todolist li:hover {
